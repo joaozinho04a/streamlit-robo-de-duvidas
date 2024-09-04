@@ -1,0 +1,35 @@
+''' Pergunta CoPilot
+Crie uma código em python que gere uma estrutura de pastas adequadas a um projeto streamlit. Garanta que ela siga um padrão comumente conhecido (ex: crie uma pasta app para guardar o código princial). Além disso, me gere um texto explicando qual tipo de arquivo deve ser guardado em cada pasta
+'''
+
+import os
+
+# Estrutura de pastas
+folders = [
+    'app',  # Código principal do Streamlit
+    'data',  # Dados brutos e processados
+    'models',  # Modelos treinados
+    'scripts',  # Scripts auxiliares
+    'assets',  # Imagens, CSS, JS, etc.
+    'config',  # Arquivos de configuração
+    'tests',  # Testes unitários e de integração
+]
+
+# Criar as pastas
+for folder in folders:
+    os.makedirs(folder, exist_ok=True)
+
+# Texto explicativo
+explanation = """
+Estrutura de Pastas do Projeto Streamlit:
+
+1. **app**: Contém o código principal do Streamlit, geralmente o arquivo `app.py` ou `main.py`.
+2. **data**: Armazena os dados brutos e processados que serão utilizados pelo aplicativo.
+3. **models**: Guarda os modelos treinados que serão carregados e utilizados pelo aplicativo.
+4. **scripts**: Scripts auxiliares para processamento de dados, treinamento de modelos, etc.
+5. **assets**: Arquivos estáticos como imagens, arquivos CSS, JavaScript, etc.
+6. **config**: Arquivos de configuração, como arquivos `.env`, configurações de logging, etc.
+7. **tests**: Testes unitários e de integração para garantir a qualidade do código.
+"""
+
+print(explanation)
